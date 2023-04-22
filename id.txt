@@ -1,0 +1,170 @@
+Hello!@#$@#$%g
+
+// Contact
+
+package com.example.demo;
+
+public class Contact {
+	
+	private Long cid;
+	public Contact(Long cid, String email, String contactName, Long userId) {
+		super();
+		this.cid = cid;
+		this.email = email;
+		this.contactName = contactName;
+		this.userId = userId;
+	}
+	private String email;
+	public Contact() {
+		super();
+	}
+	private String contactName;
+	private Long userId;
+	public Long getCid() {
+		return cid;
+	}
+	public void setCid(Long cid) {
+		this.cid = cid;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getContactName() {
+		return contactName;
+	}
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+}
+
+
+// User
+
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import java.util.*;
+
+public class User {
+	
+	// port 9001
+	
+	public User() {
+		super();
+	}
+
+	private int id;
+	public User(int id, String name, String phone) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public List<Contact> getContacts() {
+		return contacts;
+	}
+
+	public void setContacts(List<Contact> contacts) {
+		this.contacts = contacts;
+	}
+
+	public User(int id, String name, String phone, List<Contact> contacts) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+		this.contacts = contacts;
+	}
+
+	private String name;
+	private String phone;
+	
+	List<Contact> contacts = new ArrayList<>();
+	
+
+}
+
+
+
+
+// UserService
+
+package Service;
+
+import com.example.demo.User;
+
+public interface UserService {
+	
+	public User getUser(Long id);
+
+}
+
+
+// UserServiceImpl
+
+package Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.*;
+import java.awt.*;
+import java.io.*;
+import java.lang.*;
+
+
+import com.example.demo.User;
+
+public class UserServiceImpl  implements UserService{
+
+	// Fake user List
+	
+	List<User> list = List.of(id: 1,name: "vishnu",phone: "1234567890");
+	
+			
+	
+			
+	
+	@Override
+	public User getUser(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
